@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Menu — Torogoz Contemporary Latin Cookery</title>
+<meta name="description" content="Explore our contemporary Latin menu featuring bold flavors and vibrant plates" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-[#fdf8ef] text-[#2b1d12] antialiased" style="font-family:'Inter',system-ui,sans-serif;">
+
+<!-- ===== Navbar ===== -->
+<nav id="site-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+  <div class="mx-auto max-w-7xl flex items-center justify-between px-5 md:px-10 py-4">
+    <a href="index.html" class="font-[Playfair_Display] text-xl md:text-2xl font-medium tracking-tight">Torogoz</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html#about" class="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#795e3f] hover:text-[#2b1d12] transition-colors">About</a>
+      <a href="menu.html" class="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#795e3f] hover:text-[#2b1d12] transition-colors">Menu</a>
+      <a href="index.html#events" class="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#795e3f] hover:text-[#2b1d12] transition-colors">Events</a>
+      <a href="index.html#reviews" class="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#795e3f] hover:text-[#2b1d12] transition-colors">Reviews</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" data-bind-href="site.toastReserveUrl" class="text-[0.72rem] font-semibold uppercase tracking-[0.2em] bg-[#2b1d12] text-[#f7efe3] px-4 py-2 hover:bg-[#3d2a1a] transition-colors">Reserve Now</a>
+      <a href="index.html#visit" class="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-[#795e3f] hover:text-[#2b1d12] transition-colors">Find Us</a>
+    </div>
+    <button id="nav-hamburger" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+      <span class="block w-5 h-[1.5px] bg-[#2b1d12]"></span>
+      <span class="block w-5 h-[1.5px] bg-[#2b1d12]"></span>
+      <span class="block w-5 h-[1.5px] bg-[#2b1d12]"></span>
+    </button>
+  </div>
+  <div id="nav-mobile-menu" class="hidden md:hidden bg-[#fdf8ef] border-t border-[#795e3f]/15 px-5 py-6 flex flex-col gap-4">
+    <a href="index.html#about" class="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-[#795e3f]">About</a>
+    <a href="menu.html" class="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-[#795e3f]">Menu</a>
+    <a href="index.html#events" class="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-[#795e3f]">Events</a>
+    <a href="index.html#reviews" class="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-[#795e3f]">Reviews</a>
+    <a href="#" target="_blank" rel="noopener noreferrer" data-bind-href="site.toastReserveUrl" class="text-[0.8rem] font-semibold uppercase tracking-[0.18em] bg-[#2b1d12] text-[#f7efe3] px-4 py-2 text-center">Reserve Now</a>
+    <a href="index.html#visit" class="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-[#795e3f]">Find Us</a>
+  </div>
+</nav>
+
+<main class="pt-20">
+  <div class="min-h-screen bg-[#fdf8ef]">
+    <!-- Header -->
+    <div class="bg-[#2b1d12] text-[#f7efe3] py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-10">
+        <p class="text-[0.68rem] font-semibold uppercase tracking-[0.35em] text-[#f7efe3]/50 mb-4">Our Menu</p>
+        <h1 class="font-[Playfair_Display] text-4xl md:text-6xl font-medium tracking-tight leading-[1.05]">Bold &amp; <span class="italic font-light">vibrant.</span></h1>
+        <p class="mt-4 text-[#f7efe3]/70 max-w-lg text-[0.95rem] leading-relaxed">
+          Rooted in Latin America&apos;s extraordinary culinary heritage and reimagined with contemporary technique. Every plate tells a story.
+        </p>
+      </div>
+    </div>
+
+    <!-- Event banners -->
+    <div id="menu-events-banner" class="bg-gradient-to-r from-[#b5773a]/10 via-[#b5773a]/5 to-[#b5773a]/10 border-b border-[#b5773a]/20" style="display:none;">
+      <div class="mx-auto max-w-7xl px-5 md:px-10 py-4">
+        <div class="flex items-center gap-3 overflow-x-auto">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-[#b5773a] flex-shrink-0">✦ Events</span>
+          <div id="menu-events-list" class="flex items-center gap-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-5 md:px-10 py-10">
+      <!-- Controls bar -->
+      <div class="flex flex-col md:flex-row md:items-center gap-4 mb-8 sticky top-[72px] bg-[#fdf8ef] z-20 py-4 border-b border-[#795e3f]/10">
+        <div class="relative flex-1 max-w-sm">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#795e3f]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" stroke-width="2"/><path d="m21 21-4.35-4.35" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input id="menu-search" type="text" placeholder="Search dishes..." class="w-full pl-10 pr-4 py-2.5 border border-[#795e3f]/20 bg-white text-[0.85rem] outline-none focus:border-[#b5773a] transition-colors" />
+        </div>
+        <div id="menu-dietary-filters" class="flex items-center gap-2 overflow-x-auto"></div>
+        <div class="flex items-center gap-1 border border-[#795e3f]/20 p-0.5">
+          <button id="menu-view-grid" class="p-2 transition-colors bg-[#2b1d12] text-white" title="Grid view">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+          </button>
+          <button id="menu-view-list" class="p-2 transition-colors text-[#795e3f]" title="List view">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><rect x="1" y="2" width="14" height="2" rx="0.5"/><rect x="1" y="7" width="14" height="2" rx="0.5"/><rect x="1" y="12" width="14" height="2" rx="0.5"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chef's picks -->
+      <div id="menu-chefs-picks" class="mb-12"></div>
+
+      <!-- Category tabs -->
+      <div id="menu-cat-tabs" class="flex items-center gap-2 overflow-x-auto pb-4 mb-6"></div>
+
+      <!-- Items -->
+      <div id="menu-items-container"></div>
+    </div>
+  </div>
+</main>
+
+<!-- Item detail modal -->
+<div id="menu-item-modal" class="modal-overlay" style="display:none;">
+  <div class="modal-content relative" id="menu-item-modal-content"></div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer class="bg-[#2b1d12] text-[#f7efe3] py-16">
+  <div class="mx-auto max-w-7xl px-5 md:px-10">
+    <div class="grid gap-10 md:grid-cols-3 items-start">
+      <div>
+        <p class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-[#f7efe3]/50 mb-3">Visit</p>
+        <p class="text-[0.9rem] leading-relaxed text-[#f7efe3]/80" data-bind="site.address">525 Locust Place, Sewickley, PA 15143</p>
+        <a href="#" data-bind-tel="site.phoneRaw" data-bind="site.phoneDisplay" class="mt-2 block text-[0.9rem] text-[#f7efe3]/80 hover:text-[#d9a05f]">(412) 509-0314</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" data-bind-href="site.toastReserveUrl" class="mt-3 inline-block text-[0.78rem] text-[#d9a05f] hover:text-[#f7efe3] underline underline-offset-4">Reserve on Toast →</a>
+      </div>
+      <div class="text-center">
+        <p class="font-[Playfair_Display] text-3xl md:text-4xl">Torogoz</p>
+        <p class="mt-2 text-[0.72rem] uppercase tracking-[0.25em] text-[#f7efe3]/45">Contemporary Latin Cookery</p>
+      </div>
+      <div class="md:text-right">
+        <p class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-[#f7efe3]/50 mb-3">Follow</p>
+        <div class="flex gap-6 md:justify-end text-[0.85rem] text-[#f7efe3]/80">
+          <a href="#" target="_blank" rel="noopener noreferrer" data-bind-href="site.instagramUrl" class="hover:text-[#d9a05f]">Instagram</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" data-bind-href="site.facebookUrl" class="hover:text-[#d9a05f]">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-14 border-t border-[#f7efe3]/15 pt-6 flex flex-col md:flex-row justify-between gap-3 text-[0.7rem] text-[#f7efe3]/40">
+      <span>© <span id="footer-year">2026</span> Torogoz Contemporary Latin Cookery. All rights reserved.</span>
+      <span>Lunch · Dinner · Cocktails</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/util.js"></script>
+<script src="js/dietary.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>
